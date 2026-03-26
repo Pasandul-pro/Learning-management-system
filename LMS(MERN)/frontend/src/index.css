@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0057bd;
+  --color-primary-dim: #003a80;
+  --color-primary-container: #6e9fff;
+  --color-on-primary: #f0f2ff;
+  --color-secondary: #6a37d4;
+  --color-secondary-dim: #5e26c7;
+  --color-secondary-container: #dac9ff;
+  --color-on-secondary: #f8f0ff;
+  --color-tertiary: #893c92;
+  --color-tertiary-dim: #7b2f85;
+  --color-tertiary-container: #f199f7;
+  --color-on-tertiary: #ffeefb;
+  --color-surface: #f5f7f9;
+  --color-on-surface: #1a1c1e;
+  --color-surface-variant: #d9dde0;
+  --color-on-surface-variant: #3f4244;
+  --color-surface-container-low: #eef1f3;
+  --color-surface-container-high: #dfe3e6;
+  --color-surface-container-highest: #d9dde0;
+  --color-surface-container-lowest: #ffffff;
+  --color-outline: #747779;
+  --color-outline-variant: #abadaf;
+  --color-error: #b31b25;
+  --color-on-error: #ffefee;
+
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --radius-default: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body;
+    min-height: max(884px, 100dvh);
+  }
+  h1, h2, h3, .font-headline {
+    @apply font-headline;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply backdrop-blur-md bg-white/40 border border-white/30;
+  }
+}
